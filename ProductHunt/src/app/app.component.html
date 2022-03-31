@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"> 
+<div class="container">
+  <h3 >{{title}}</h3>
+  
+  <div *ngFor="let product of products|sort:[sortBy]">
+    <br/>
+    
+    <div class="card" id="card">
+      <div class="row no-gutters">
+        <div class="col-md-4" style="padding-left: 15px; width: 60%;">
+          <h5 class="card-title">{{product.name | titlecase }}</h5>
+          <p class="card-text">Upvotes: {{product.upvotes}}</p>
+          <p class="card-text">Downvotes: {{product.downvotes}}</p>
+        </div>
+        <div class="col-md-8" style="width: 40%;">
+          <div class="card-body" style="display: flex; ">
+            <button type="button" class="btn btn-link" (click)="orderByUpvotes()"><span class="bi bi-arrow-up " style="color: green;"></span></button>
+            <button type="button" class="btn btn-link" (click)="orderByDownvotes()"><span class="bi bi-arrow-down " style="color: red;"></span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

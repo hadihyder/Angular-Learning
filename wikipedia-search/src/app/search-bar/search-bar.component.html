@@ -1,0 +1,7 @@
+<form (submit)="onFormSubmit($event)">
+    <label for="searchTerm" class="font-weight-bold">
+        Enter Search term and Hit Enter: 
+    </label>
+    <br>
+    <input id="searchTerm" (input)="termEvent = $event"/>
+</form>

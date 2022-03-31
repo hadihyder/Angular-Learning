@@ -1,0 +1,8 @@
+.col {
+    display: flex;
+}
+
+#card {
+    height: 10rem;;
+    width: 20rem;
+}

@@ -1,0 +1,21 @@
+<div class="container">
+    <h2> {{title}}</h2>
+    <form class="form" (submit)="onSubmit()">
+        <div class="input">
+            <label for="inputMoney" class="col-lg-2">Enter amount to deposit </label>
+            <input 
+                type="tel"
+                id="inputMoney"
+                class="input"
+                (input)="amount=($any($event).target.value)">
+                
+        </div>
+        
+        <div class="submit">
+            <button type="submit" class="btn btn-primary">Deposit</button>
+        </div>
+        <div>
+            <button class="btn btn-danger" [routerLink]="['login']" >Cancel</button>
+        </div>
+    </form>
+</div>

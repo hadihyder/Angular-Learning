@@ -1,0 +1,7 @@
+<div *ngIf="bank" id="detail">
+    <h2>{{bank.name | uppercase}}</h2>
+    <h3>Details</h3>
+    <div><strong>ID: </strong> {{ bank.id }}</div>
+    <div><strong>Name: </strong>{{ bank.name }}</div>
+    <div><strong>Website: </strong><a href="{{bank.website}}" >{{ bank.website }}</a></div>
+</div>

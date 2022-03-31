@@ -1,0 +1,14 @@
+<div class="container">
+    <h2>What would you like to do?</h2>
+    <div>
+        <button class="btn btn-primary" [routerLink]="['deposit']" [queryParams]="{id: id}">Deposit</button>
+    </div>
+    <br/>
+    <div>
+        <button class="btn btn-primary" [routerLink]="['withdraw']" [queryParams]="{id: id}">Withdraw</button>
+    </div>
+    <br/>
+    <div>
+        <button class="btn btn-danger" [routerLink]="['']" >Cancel</button>
+    </div>
+</div>

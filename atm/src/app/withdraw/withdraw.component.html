@@ -1,0 +1,18 @@
+<div class="container">
+    <h2>{{ title }}</h2>
+    <form class="form-group" (submit)="onSubmit()">
+        <h2 >Your balance: {{user.balance}}</h2>
+        <div class="input">
+            <label for="inputMoney" class="col-lg-2">Enter amount to withdraw</label>
+            <input 
+            type="tel"
+                id="inputMoney"
+                class="input"
+                (input)="amount=($any($event).target.value)">
+        </div>
+        <div class="submit">
+            <button type="submit" class="btn btn-primary">Withdraw</button>
+        </div>
+        <button class="btn btn-danger" [routerLink]="['login']" >Cancel</button>
+    </form>
+</div>

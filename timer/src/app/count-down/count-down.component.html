@@ -1,0 +1,20 @@
+
+<div class="timer">
+    <h4> Timer </h4>
+    <span id="hours"> {{hours}} </span>Hrs 
+    <span id="minutes"> {{minutes}} </span>Min
+    <span id="seconds"> {{seconds}} </span>S
+</div>
+<br>
+<div class="controls">
+    <div>
+        <button type="button" id="start" (click)="onStart()">Start</button>
+        
+        <button type="button" id="reset" (click)="onStop()">Stop</button>
+    </div>
+    <br>
+    <div>
+        <div>Countdowns: {{countdowns}}</div>
+        <div>Pauses: {{pauses}}</div>
+    </div>
+</div>

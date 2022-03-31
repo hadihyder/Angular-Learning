@@ -1,0 +1,34 @@
+<div class = "container">
+    <div class="box center">
+        <div class="display">
+            <label> {{num}} </label>
+        </div>
+        <hr/>
+        <div class="rows">
+            <div class="row">
+                <button type="button" value="7" (click)="inputNumber(($any($event).target.value))"><strong>7</strong></button>
+                <button type="button" value="8" (click)="inputNumber(($any($event).target.value))"><strong>8</strong></button>
+                <button type="button" value="9" (click)="inputNumber(($any($event).target.value))"><strong>9</strong></button>
+                <button type="button" (click)="operations('-')"><strong>-</strong></button>
+            </div>
+            <div class="row">
+                <button type="button" value="4" (click)="inputNumber(($any($event).target.value))"><strong>4</strong></button>
+                <button type="button" value="5" (click)="inputNumber(($any($event).target.value))"><strong>5</strong></button>
+                <button type="button" value="6" (click)="inputNumber(($any($event).target.value))"><strong>6</strong></button>
+                <button type="button" (click)="operations('+')"><strong>+</strong></button>
+            </div>
+            <div class="row">
+                <button type="button" value="1" (click)="inputNumber(($any($event).target.value))"><strong>1</strong></button>
+                <button type="button" value="2" (click)="inputNumber(($any($event).target.value))"><strong>2</strong></button>
+                <button type="button" value="3" (click)="inputNumber(($any($event).target.value))"><strong>3</strong></button>
+                <button type="button" (click)="operations('x')"><strong>x</strong></button>
+            </div>
+            <div class="row">
+                <button type="button" (click)="clear()"><strong>C</strong></button>
+                <button type="button" value="0" (click)="inputNumber(($any($event).target.value))"><strong>0</strong></button>
+                <button type="button" (click)="getResult()"><strong>=</strong></button>
+                <button type="button" (click)="operations('/')"><strong>/</strong></button>
+            </div>
+        </div>
+    </div>
+</div>

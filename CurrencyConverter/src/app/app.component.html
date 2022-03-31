@@ -1,0 +1,20 @@
+<div class="container">
+  <h2>{{title}}</h2>
+  <form [formGroup]="converterForm" (ngSubmit)="submit()">
+    <label>From: </label>
+    <select formControlName="currencySource">
+      <option *ngFor="let currency of currencies" [ngValue]="currency.currency" >{{currency.currency}}</option>
+    </select>
+    <input 
+        type="tel"
+        (input)="onInputMoney($event)"/>
+        <label>To: </label>
+        <select formControlName="currencyTarget">
+          <option *ngFor="let currency of currencies" [ngValue]="currency.currency" >{{currency.currency}}</option>
+        </select>        
+    <button type="submit">Convert</button>
+  </form>
+  <div *ngIf="isReady">
+    {{ inputMoney | converter: [selectedSrc, selectedTrgt] | currency: selectedSrc}}
+  </div>
+</div>

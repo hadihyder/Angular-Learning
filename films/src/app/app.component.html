@@ -1,0 +1,42 @@
+<div class="container">
+  <h3 >{{title}}</h3>
+  <div *ngFor="let film of films">
+    <br/>
+    <div style="margin: 5% 40% 5% 40%;">
+    <div class="card" id="card" >
+    <div class="row" id="imgRow">
+      <img class="card-img-top " style="height: 150px" src={{film.imgUrl}}/>
+    </div >
+    <div class="row">
+      <div class="col">
+        <label>Name: </label>
+        <div class="col">
+          {{ film.name | titlecase}}
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <label>Release Date: </label>
+      <div class="col">
+        {{ film.date | date: 'MMMM d, yyyy'}}
+      </div>
+    </div>
+  </div>
+    <div class="row">
+      <div class="col">
+        <label>Director: </label>
+      <div class="col">
+        {{ film.director | titlecase}}
+      </div>
+    </div>  
+  </div>
+    <div class="row">
+      <div class="col">
+        <label>Box Office Gross: </label>
+      <div class="col">
+        {{ film.boxOffice | currency :'USD':'symbol' : '1.0-0'}}
+      </div>
+  </div>
+</div>
+</div>
